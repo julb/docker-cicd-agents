@@ -1,0 +1,25 @@
+{
+  "builders": [
+    {
+      "type": "docker",
+      "image": "registry.access.redhat.com/ubi8/ubi",
+      "commit": true
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "ansible",
+      "playbook_file": "./base.yml",
+      "extra_arguments": [
+        "--become-method=su"
+      ]
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "docker-tag",
+      "repository": "julb/ubi8-base",
+      "tags": ["1", "2"]
+    }
+  ]
+}

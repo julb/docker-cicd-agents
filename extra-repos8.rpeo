@@ -1,0 +1,30 @@
+[epel-everything]
+name=EPEL Everything
+baseurl=https://dl.fedoraproject.org/pub/epel/8/Everything/x86_64
+enabled=1
+gpgcheck=0
+
+[epel-modular]
+name=EPEL Modular
+baseurl=https://dl.fedoraproject.org/pub/epel/8/Modular/x86_64
+enabled=1
+gpgcheck=0
+
+[centos-base]
+name=CentOS-8 - BaseOS
+baseurl=http://mirror.centos.org/centos/8/BaseOS/$basearch/os/
+enabled=1
+gpgcheck=0
+
+[centos-appstream]
+name=CentOS-8 - AppStream
+baseurl=http://mirror.centos.org/centos/8/AppStream/$basearch/os/
+enabled=1
+gpgcheck=0
+
+#additional packages that may be useful
+[centos-extras]
+name=CentOS-8 - Extras
+baseurl=http://mirror.centos.org/centos/8/extras/$basearch/os/
+enabled=1
+gpgcheck=0

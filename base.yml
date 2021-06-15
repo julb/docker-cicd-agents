@@ -1,0 +1,5 @@
+- name: 'Provision Image'
+  hosts: default
+  roles:
+    - role: install-epel-release-repository
+    - role: base
